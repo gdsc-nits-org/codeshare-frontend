@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Poppins", sans-serif;
+  align-items: center;
+  padding: 5rem;
+  border-radius: 20px 20px 0 0;
+  background-color: white;
+  color: black;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+
+  a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.5 rem;
+  }
+
+  .logo {
+    margin-left: 0rem;
+    margin-bottom: 2rem;
+  }
+
+  .quickLinks {
+    margin-top: 2rem;
+  }
+  .footerLinks {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    justify-content: center;
+  }
+
+  .footerQuickLinks {
+    font-weight: 300;
+    text-decoration: underline;
+  }
+
+  .footerLinks li {
+    margin-right: 34rem;
+  }
+
+  .footerLinks a:hover {
+    text-decoration: underline;
+  }
+}
+
+.footerLine {
+  position: absolute;
+  width: 90%;
+  height: 0.5px;
+  background: linear-gradient(to right, transparent, black, transparent);
+  bottom: -28rem;
+}
+
+.footerCopyright {
+  display: flex;
+  justify-content: center;
+  color: black;
+  margin-top: 300px;
+  position: absolute;
+  left: 34%;
+  transform: translate(-5%, 0%);
+  text-align: center;
+}
+
+.gdsclogo {
+  margin-top: 15rem;
+  margin-left: -72rem;
+  margin-right: 37rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+  .footer {
+    padding: 1rem;
+  }
+
+  .logo {
+    margin-left: 0;
+  }
+
+  .quickLinks {
+    margin-top: 0rem;
+  }
+
+  .footerLine {
+    width: 100%;
+    bottom: -44.5rem;
+  }
+
+  .footerCopyright {
+    margin-top: 41rem;
+    margin-left: -6rem;
+  }
+
+  .gdsclogo {
+    margin-left: 4rem;
+    margin-right: auto;
+    margin-top: 2.5rem;
+  }
+}
