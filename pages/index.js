@@ -1,6 +1,8 @@
+"use client";
 import Head from "next/head";
 import { Poppins } from "next/font/google";
 import styles from "@/styles/Home.module.scss";
+// import { AuthContextProvider } from "./context/AuthContext";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -16,7 +18,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${styles.main} ${poppins.className}`}>Hello World</main>
+      <main className={`${styles.main} ${poppins.className}`}>Main</main>
     </>
   );
 }
