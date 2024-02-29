@@ -1,5 +1,6 @@
-"use Client";
 import React from "react";
+import { Icon } from "@iconify/react";
+import homeIcon from "@iconify/icons-mdi/home";
 import Link from "next/link";
 import Image from "next/image";
 import profileDemo from "@/public/Images/profileDemo.jpg";
@@ -17,19 +18,20 @@ const profileCard = () => {
       <button>Edit Profile</button>
       <div className={classes.profileCard_icons}>
         <div>
-          <Link href="">
-            <Image src="" alt="" />
+          <Link href="#">
+            {/* <Image src="" alt="" /> */}
+            <Icon icon={homeIcon} />
             Instagram/link
           </Link>
         </div>
         <div>
-          <Link href="">
+          <Link href="#">
             <Image src="" alt="" />
             facebook/link
           </Link>
         </div>
         <div>
-          <Link href="">
+          <Link href="#">
             <Image src="" alt="" />
             twitter/link
           </Link>

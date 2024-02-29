@@ -1,7 +1,7 @@
 "use Client";
 import Head from "next/head";
 import { Poppins } from "next/font/google";
-import ProfileCard from "@/components/profile/profileCard";
+import Landing from "@/components/Landing";
 import styles from "@/styles/Home.module.scss";
 
 const poppins = Poppins({
@@ -19,8 +19,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main} ${poppins.className}`}>
-        {/* Hello World */}
-        <ProfileCard />
+        <Landing />
       </main>
     </>
   );
