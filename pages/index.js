@@ -1,7 +1,7 @@
 "use Client";
 import Head from "next/head";
 import { Poppins } from "next/font/google";
-import Landing from "@/components/Landing";
+import { Landing } from "@/components";
 import styles from "@/styles/Home.module.scss";
 
 const poppins = Poppins({
