@@ -4,7 +4,7 @@ import styles from "./Navbar.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function Navbar() {
+const Navbar = () => {
   return (
     <div className={styles.container}>
       <div className={styles.logo}>
@@ -16,7 +16,7 @@ export default function Navbar() {
           <Link href={"/"} style={{ textDecoration: "none" }}>
             <li>About Us</li>
           </Link>
-          <Link href={"/"} style={{ textDecoration: "none" }}>
+          <Link href={"#editor"} style={{ textDecoration: "none" }}>
             <li>Editor</li>
           </Link>
           <Link href={"/"} style={{ textDecoration: "none" }}>
@@ -34,4 +34,5 @@ export default function Navbar() {
       </div>
     </div>
   );
-}
+};
+export default Navbar;

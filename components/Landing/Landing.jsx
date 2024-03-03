@@ -2,8 +2,9 @@ import { useState } from "react";
 import { Icon } from "@iconify/react";
 import closeIcon from "@iconify/icons-mdi/close-circle-outline";
 import styles from "./Landing.module.scss";
+import { Editor } from "@monaco-editor/react";
 
-export default function Landing() {
+const Landing = () => {
   const [hash, setHash] = useState("");
   function clearHash() {
     setHash("");
@@ -47,7 +48,20 @@ export default function Landing() {
           dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et
           velit interdum, ac aliquet odio mattis.
         </div>
+        <div
+          id="editor"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "2rem",
+            justifyContent: "center",
+          }}
+        >
+          <span className={styles.welcome_text}>Save Your Code</span>
+          <Editor height="60vh" width="70vw" theme="vs-dark" />
+        </div>
       </div>
     </div>
   );
-}
+};
+export default Landing;
