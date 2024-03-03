@@ -16,7 +16,7 @@ const Navbar = () => {
           <Link href={"/"} style={{ textDecoration: "none" }}>
             <li>About Us</li>
           </Link>
-          <Link href={"#editor"} style={{ textDecoration: "none" }}>
+          <Link href={"/#editor"} style={{ textDecoration: "none" }}>
             <li>Editor</li>
           </Link>
           <Link href={"/"} style={{ textDecoration: "none" }}>

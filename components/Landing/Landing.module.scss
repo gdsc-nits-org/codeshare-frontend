@@ -79,4 +79,14 @@
       }
     }
   }
+  .editor {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    .heading {
+      font-size: 3rem;
+      flex: 2;
+    }
+  }
 }

@@ -48,18 +48,10 @@ const Landing = () => {
           dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et
           velit interdum, ac aliquet odio mattis.
         </div>
-        <div
-          id="editor"
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "2rem",
-            justifyContent: "center",
-          }}
-        >
-          <span className={styles.welcome_text}>Save Your Code</span>
-          <Editor height="60vh" width="70vw" theme="vs-dark" />
-        </div>
+      </div>
+      <div className={styles.editor} id="editor">
+        <span className={styles.heading}>Save Your Code</span>
+        <Editor height="60vh" width="70vw" theme="vs-dark" />
       </div>
     </div>
   );
