@@ -4,7 +4,7 @@ import facebook from "@iconify/icons-mdi/facebook";
 import linkedin from "@iconify/icons-mdi/linkedin";
 import Link from "next/link";
 import Image from "next/image";
-import profileDemo from "@/public/images/profileDemo.jpg";
+import profileDemo from "/public/images/profileDemo.jpg";
 import classes from "./ProfileCard.module.scss";
 
 const ProfileCard = ({
