@@ -5,7 +5,7 @@ import dot from "@iconify/icons-mdi/dot";
 import { ProfileCard } from "@/components";
 import styles from "./profile.module.scss";
 
-export default function Profile() {
+const Profile = () => {
   return (
     <div className={styles.container}>
       <div className={styles.profile}>
@@ -34,4 +34,6 @@ export default function Profile() {
       </div>
     </div>
   );
-}
+};
+
+export default Profile;

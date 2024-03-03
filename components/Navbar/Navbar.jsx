@@ -1,5 +1,5 @@
 import { Icon } from "@iconify/react";
-import cLogo from "@/public/Images/c_logo.png";
+import cLogo from "@/public/images/c_logo.png";
 import styles from "./Navbar.module.scss";
 import Link from "next/link";
 import Image from "next/image";
@@ -35,4 +35,5 @@ const Navbar = () => {
     </div>
   );
 };
+
 export default Navbar;

@@ -4,17 +4,17 @@ import facebook from "@iconify/icons-mdi/facebook";
 import linkedin from "@iconify/icons-mdi/linkedin";
 import Link from "next/link";
 import Image from "next/image";
-import profileDemo from "@/public/Images/profileDemo.jpg";
-import classes from "./profileCard.module.scss";
+import profileDemo from "@/public/images/profileDemo.jpg";
+import classes from "./ProfileCard.module.scss";
 
-export default function profileCard({
+const ProfileCard = ({
   name = "Name",
   about = "About",
   profilePic = profileDemo,
-}) {
+}) => {
   return (
     <div className={classes.profileCard}>
-      <Image src={profileDemo} className={classes.profilePic} alt="" />
+      <Image src={profilePic} className={classes.profilePic} alt="" />
       <div className={classes.info}>
         <div>{name}</div>
         <div>{about}</div>
@@ -36,4 +36,6 @@ export default function profileCard({
       </div>
     </div>
   );
-}
+};
+
+export default ProfileCard;
