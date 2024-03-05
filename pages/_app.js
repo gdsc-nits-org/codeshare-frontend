@@ -1,10 +1,10 @@
 import "@/styles/globals.scss";
-import Navbar from "@/components/Navbar/Navbar";
+import { Navbar } from "@/components";
 
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar />
       <Component {...pageProps} />
     </>
   );

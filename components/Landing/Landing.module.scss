@@ -1,0 +1,92 @@
+.container {
+  height: 100vh;
+  background-color: var(--gdsc-bg-2-100);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 4rem 0 4rem;
+  color: var(--white-text-1-100);
+  .welcome {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .welcome_text {
+      font-size: 3rem;
+      flex: 2;
+    }
+    .welcome_description {
+      font-size: 1.5rem;
+      flex: 6;
+      margin-top: 3rem;
+      width: 60%;
+      padding-bottom: 2rem;
+      @media (max-width: 768px) {
+        width: 95%;
+      }
+    }
+    .buttons_search {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 5rem;
+      .button {
+        width: 11.5%;
+        cursor: pointer;
+        background-color: var(--black-text-1-100);
+        color: var(--white-text-1-100);
+        font-size: 1.2rem;
+        margin-right: 2rem;
+        padding: 1.6rem 1.8rem;
+        border-radius: 1rem;
+        border: none;
+        min-width: 160px;
+        @media (max-width: 768px) {
+          width: 30%;
+        }
+      }
+      .input_container {
+        position: relative;
+        width: 20%;
+        min-width: 200px;
+        .input {
+          width: 100%;
+          padding: 1.6rem 1.2rem 1rem 1.2rem;
+          border-radius: 12px;
+          color: var(--black-text-1-100);
+          font-size: 1.4rem;
+          padding-left: 1.5rem;
+          border: none;
+        }
+        .text {
+          position: absolute;
+          font-size: 0.8rem;
+          left: 1.5rem;
+          top: 0.4rem;
+          color: var(--grey-text-2-100);
+        }
+        .cross {
+          position: absolute;
+          font-size: 2rem;
+          top: 1rem;
+          right: 1rem;
+          cursor: pointer;
+          z-index: 2;
+          color: var(--gdsc-bg-2-100);
+        }
+        @media (max-width: 768px) {
+          width: 50%;
+        }
+      }
+    }
+  }
+  .editor {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    .heading {
+      font-size: 3rem;
+      flex: 2;
+    }
+  }
+}
