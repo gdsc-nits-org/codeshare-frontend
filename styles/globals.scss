@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 :root {
   --gdsc-blue-1-100: #4885ed;
   --gdsc-blue-2-100: #4285f4;
@@ -11,14 +13,20 @@
   --gdsc-yellow-1-100: #f4c20d;
 
   --gdsc-dark-1-100: #1d192b;
+  --gdsc-dark-2-100: #212121;
+  --gdsc-dark-3-100: #111111;
   --gdsc-content-1-100: #313033;
   --gdsc-grayish-1-100: #49454f;
   --gdsc-line-1-100: #c5c5c5;
   --gdsc-bg-1-100: #dbdbdb;
+  --gdsc-bg-2-100: #292929;
   --gdsc-neutral-1-100: #605d62;
   --gdsc-shadow-1-100: rgb(218, 215, 215);
 
+  --white-text-1-100: #ffffff;
+  --black-text-1-100: #000000;
   --grey-text-1-100: rgba(101, 108, 115, 1);
+  --grey-text-2-100: #8d8d8d;
   --grey-text-1-70: rgba(101, 108, 115, 0.7);
 
   --heading-1-text-weight: 600;
@@ -31,4 +39,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--gdsc-bg-2-100);
 }

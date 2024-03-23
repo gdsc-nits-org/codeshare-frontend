@@ -1,9 +1,11 @@
 "use client";
 
-import React from "react";
+import { Icon } from "@iconify/react";
+import cLogo from "@/public/images/c_logo.png";
 import styles from "./Navbar.module.scss";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import firebase from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
@@ -18,7 +20,10 @@ export default function Navbar() {
     const auth = getAuth(app);
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
-        setUser(user);
+        setUser({
+          name: user.displayName,
+          profilePic: user.photoURL,
+        });
       } else {
         setUser(null);
       }
@@ -41,7 +46,7 @@ export default function Navbar() {
     <div>
       <div className={styles.container}>
         <div className={styles.logo}>
-          <img src="/images/c_logo.png" alt="" />
+          <Image src={cLogo} width={60} alt="" />
           <span>odeshare</span>
         </div>
         <div className={styles.right}>
@@ -49,19 +54,24 @@ export default function Navbar() {
             <Link href={"/"} style={{ textDecoration: "none" }}>
               <li>About Us</li>
             </Link>
-            <Link href={"/"} style={{ textDecoration: "none" }}>
+            <Link href={"/#editor"} style={{ textDecoration: "none" }}>
               <li>Editor</li>
             </Link>
             <Link href={"/"} style={{ textDecoration: "none" }}>
               <li>Team</li>
             </Link>
             {user ? (
-              <li>
-                <img src="/images/profile_icon.png" alt="" />
-              </li>
+              <Link href={"/profile"} style={{ textDecoration: "none" }}>
+                <li>
+                  <Icon
+                    icon="iconamoon:profile-circle-fill"
+                    className={styles.profile_icon}
+                  />
+                </li>
+              </Link>
             ) : (
               <li>
-                <button onClick={handleGoogleSignIn}>
+                <button onClick={handleGoogleSignIn} className={styles.btnn}>
                   Sign in with Google
                 </button>
               </li>

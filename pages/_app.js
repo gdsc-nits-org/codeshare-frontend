@@ -6,7 +6,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <UserProvider>
-        <Navbar></Navbar>
+        <Navbar />
         <Component {...pageProps} />
       </UserProvider>
     </>
