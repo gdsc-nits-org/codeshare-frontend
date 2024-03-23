@@ -1,8 +1,42 @@
+"use client";
+
 import React from "react";
 import styles from "./Navbar.module.scss";
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import firebase from "firebase/app";
+import { getAuth } from "firebase/auth";
+import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import app from "@/config";
+import { useRouter } from "next/router";
 
 export default function Navbar() {
+  const [user, setUser] = useState(null);
+  const router = useRouter();
+
+  useEffect(() => {
+    const auth = getAuth(app);
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        setUser(user);
+      } else {
+        setUser(null);
+      }
+    });
+    return () => unsubscribe();
+  }, []);
+
+  const handleGoogleSignIn = async () => {
+    const auth = getAuth(app);
+    const provider = new GoogleAuthProvider();
+    try {
+      const result = await signInWithPopup(auth, provider);
+      console.log(result.user);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <div>
       <div className={styles.container}>
@@ -21,11 +55,17 @@ export default function Navbar() {
             <Link href={"/"} style={{ textDecoration: "none" }}>
               <li>Team</li>
             </Link>
-            <Link href={"/"} style={{ textDecoration: "none" }}>
+            {user ? (
               <li>
                 <img src="/images/profile_icon.png" alt="" />
               </li>
-            </Link>
+            ) : (
+              <li>
+                <button onClick={handleGoogleSignIn}>
+                  Sign in with Google
+                </button>
+              </li>
+            )}
           </ul>
         </div>
       </div>
