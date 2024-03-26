@@ -6,10 +6,8 @@ import styles from "./Navbar.module.scss";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import firebase from "firebase/app";
-import { getAuth } from "firebase/auth";
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import app from "@/config";
+import { auth } from "@/config";
 import { useRouter } from "next/router";
 
 export default function Navbar() {
@@ -17,7 +15,6 @@ export default function Navbar() {
   const router = useRouter();
 
   useEffect(() => {
-    const auth = getAuth(app);
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
         setUser({
@@ -32,7 +29,6 @@ export default function Navbar() {
   }, []);
 
   const handleGoogleSignIn = async () => {
-    const auth = getAuth(app);
     const provider = new GoogleAuthProvider();
     try {
       const result = await signInWithPopup(auth, provider);
