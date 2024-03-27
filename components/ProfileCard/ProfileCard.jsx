@@ -24,6 +24,7 @@ const ProfileCard = () => {
         });
       } else {
         setUser(null);
+        router.push("/");
       }
     });
 
